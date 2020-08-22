@@ -1,4 +1,4 @@
-Website in beta for consulting.
+<h1>Website in beta for consulting.</h1>
 Using Rails 5.2.4.3
 
 <ul>BETA 0.01 || 22/08/2020  
