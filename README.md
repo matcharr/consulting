@@ -4,12 +4,12 @@ Using Rails 5.2.4.3
 heroku: https://alfoldievaluation-beta.herokuapp.com
 
 <ul>BETA O.O2 || 27/08/2020
-    comment implemented
-    asset pipeline implemented
-    java implementation
-    ajax for comments
-    statics page pasting ~ 60%
-    numerous pdf implemented via public(<=?)
+    <li>comment implemented</li>
+    <li>asset pipeline implemented</li>
+    <li>java implementation</li>
+    <li>ajax for comments</li>
+    <li>statics page pasting ~ 60%</li>
+    <li>numerous pdf implemented via public(<=?)</li>
 </ul>
 
 <ul>BETA 0.01 || 22/08/2020  
