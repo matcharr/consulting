@@ -1,11 +1,11 @@
 <div class='card'>
   <%= form_for @article do |f| %>
     <div class="form_group card-header">
-      <label>Titre de l'article</label></br>
+      <label> Titre de l'article</label></br>
       <%= f.text_field :title, class: 'form_control w-25'%>
     </div>
     <div class="form_group card-body">
-      <label>Contenu de l'article </label>
+      <label> Contenu de l'article </label>
       <%= f.text_area :content, class: 'form_control w-100', style: "height: 700px"%>
     </div>
     <div class="form_group card-footer">

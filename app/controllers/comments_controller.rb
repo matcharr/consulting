@@ -5,22 +5,35 @@ class CommentsController < ApplicationController
   def create
     puts "$"*100
     puts params
-    article = Comment.create(content: params[:comment][:content], user: current_user, article: Article.find(params[:article_id]))
-    redirect_to articles_path
+    @article = Article.find(params[:article_id])
+    @comment = Comment.create(content: params[:comment][:content], user: current_user, article: @article)
+    respond_to do |format|
+      format.html { redirect_to articles_path }
+      format.js { }
+    end
   end
 
   def update
+    Comment.find(params[:id]).update(content: params[:comment][:content])
+    redirect_to articles_path
   end
 
   def edit
     @comment = Comment.find(params[:id])
-
     @article = @comment.article
+    respond_to do |format|
+      format.html { redirect_to edit_comment_path(@comment.id) }
+      format.js { }
+    end
   end
 
   def destroy
-    Comment.find(params[:id]).destroy
-    redirect_to articles_path
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    respond_to do |format|
+      format.html { redirect_to articles_path }
+      format.js { }
+    end
   end
 
   private

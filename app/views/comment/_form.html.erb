@@ -1,9 +1,0 @@
-<%= form_with(model: @comment, url: "articles/#{@article[-x-1].id}/comments", method: "post") do |f| %>
-  <div class="form_group">
-    <label>Contenu de l'article </label>
-    <%= f.text_field :content, class: 'form_control'%>
-  </div>
-  <div class="form_group">
-    <button type="submit"> Poster le commentaire</button>
-  </div>
-<%end%>

@@ -1,0 +1,4 @@
+console.log(document.getElementById("article#<%=@article.id%>"))
+console.log("<%= @comment %>")
+console.log("<%= j render 'comments/show', comment: @comment %>")
+document.getElementById("article#<%=@article.id%>").insertAdjacentHTML("beforeend", "<%= j render 'comments/show', comment: @comment %>");

@@ -1,0 +1,13 @@
+<div id='comment#<%=comment.id%>'>
+  <div>
+    <h5> <%= comment.user.name %> </h5>
+    <p> <%= comment.content %> </p>
+  </div>
+  <% if current_user && current_user == comment.user || current_user && current_user.administrator%>
+    <div class='d-flex flex-column justify-content-center mr-auto'>
+      <%= link_to "Editer", edit_comment_path(comment.id), class: "text-secondary", remote: true %>      
+      <%= link_to "Supprimer", comment, method: :delete, class: "text-secondary", remote: true %>      
+    </div>
+  <% end %>
+  <hr>
+</div>

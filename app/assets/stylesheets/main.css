@@ -5,3 +5,16 @@
 .card{
     margin-top: 1em;
 }
+
+.nav-link{
+    margin-left: 2em;
+}
+
+.fat-hero-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("fat_hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 250px;
+ }

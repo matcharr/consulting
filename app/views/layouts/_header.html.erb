@@ -6,29 +6,43 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Méthode Alföldi <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Prestation</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Publications</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Références</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">International</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Newsletter</a>
-      </li>
       <li class="nav-item">
         <%= link_to "Articles", articles_path, class: "nav-link" %>
+      </li>
+        <%=link_to "Méthode Alföldi", "/statics/methode_alfoldi", class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Préstations</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%=link_to "Formation", "/statics/formation", class: "dropdown-item" %>
+          <!--<p class="p-0 dropdown-item text-secondary" >Formation à distance</p>-->
+          <%=link_to "Conseil", "/statics/conseil", class: "dropdown-item" %>        
+          <%=link_to "Recherche-action", "/statics/recherche_action", class: "dropdown-item" %>
+          <%=link_to "Animation musicale", "/statics/animation_musicale", class: "dropdown-item" %>
+          <%=link_to "Conférences familiales", "/statics/conferences_familiales", class: "dropdown-item" %>      
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Références</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%=link_to "Témoignages", "/statics/temoignages", class: "dropdown-item" %>
+          <%=link_to "Partenaires", "/statics/partenaires", class: "dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%=link_to "Livres", "/statics/livres", class: "dropdown-item" %>
+          <%=link_to "Presse", "/statics/presse", class: "dropdown-item" %>
+          <%=link_to "Dico de Francis", "/statics/dico_de_francis", class: "dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%=link_to "On répond à vos questions", "/statics/on_repond_a_vos_questions", class: "dropdown-item" %>
+          <%=link_to "Newsletter", "/statics/newsletter", class: "dropdown-item" %>
+        </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle fas fa-user-circle fa-2x" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
