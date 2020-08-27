@@ -7,7 +7,7 @@ heroku: https://alfoldievaluation-beta.herokuapp.com
     <li>comment implemented</li>
     <li>asset pipeline implemented</li>
     <li>java implementation</li>
-    <li>ajax for comments</li>
+    <li>ajax for comments but edit still need to be done</li>
     <li>statics page pasting ~ 60%</li>
     <li>numerous pdf implemented via public(<=?)</li>
 </ul>
