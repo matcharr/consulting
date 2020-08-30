@@ -1,0 +1,64 @@
+<div class='container'>
+  <div class='d-flex flex-wrap mt-4'>
+    <div class='col'>
+      <h4 >Nous vous proposons des formations en pratiques sociales.</h4>
+      <ul>
+        <li>A chaque intitulé est associé une fiche descriptive. </li>
+        <li>Prix à la journée : 1300 hors frais, exonération TVA possible, </li>
+        <li>tarif à ajuster selon les spécificités de chaque demande. </li>
+      </ul>
+      <h5> Quelques chiffres pour 2019 : </h5> 
+      <ul>
+        <li>154 journées réalisées </li>
+        <li>66 actions réalisées </li>
+        <li>974 stagiaires formés</li>
+      </ul> 
+      <hr>
+      <div class='row'>
+        <%= image_tag "Guide_20Handicap.jpg", class: "img-fluid border rounded", style: "height: 10em"%>
+        <p class='align-self-center ml-2'>Nous prenons  en compte les recommandations <br>
+        du Guide de l'Accueil du Public en Situation  de Handicap ;<br>
+         notre Référent Handicap assure à ce propos une veille attentive.</p>
+      </div>
+      <hr>
+    </div>
+    <div class='col'>
+      <div class='card'>
+        <div class='card-header'>
+          <h4>Formations:</h4>
+        </div>
+        <div class='card-body'>
+          <div class='d-flex'>
+            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/EPE_Initiation.pdf", :target => "_blank"%>
+            <p class='ml-2 align-self-center'> Evaluer en protection de l'enfance - niveau 1 initiation</p>
+          </div>
+          <hr>
+          <div class='d-flex'>
+            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/EPE_Approfondissement.pdf", :target => "_blank"%>
+            <p class='ml-2 align-self-center'> Evaluer en protection de l'enfance - niveau 2 - approfondissement</p>
+          </div>
+          <hr>
+          <div class='d-flex'>
+            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/AE3_ECRITS_20PROFESSIONNELS_20EN_20PROTECTION_20DE_20L_27ENFANCE.pdf", :target => "_blank"%>
+            <p class='ml-2 align-self-center'>Les écrits professionnels en protection de l'enfance</p>
+          </div>      
+          <hr>
+          <div class='d-flex'>
+            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/AE8_EPE_ENTRAINEMENT.pdf", :target => "_blank"%>
+            <p class='ml-2 align-self-center'>Evaluation en prot. de l'enf. et conférences familiales : sensibilisation</p>
+          </div>              
+          <hr>
+          <div class='d-flex'>
+            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/Retour_d'expérience_avec_méthode_Alföldi.pdf", :target => "_blank"%>
+            <p class='ml-2 align-self-center'>Retour d'expérience sur situations d'enfants en risque crucial avec la méthode Alföldi</p>
+          </div>         
+          <hr>
+          <div class='d-flex'>
+            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/Plan_d'amélioration_continue_de_la_qualité_-_le_classeur_PACQ.pdf", :target => "_blank"%>
+            <p class='ml-2 align-self-center'>Plan d'amélioration continue de la qualité - Le classeur Pacq</p>
+          </div> 
+        </div>            
+      </div>
+    </div>
+  </div>
+</div>

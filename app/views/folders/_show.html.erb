@@ -8,8 +8,8 @@
         </div>
       <% end %>
     </div>
-    <div class='card-body d-flex flex-wrap justify-content-around'>
-      <p> <%= folder.content %>
+    <div class='card-body text-justify' id='folder#<%=folder.id%>'>
+      <%= folder.content%>
     </div>
     <div class='card-footer'>
       <div id="folder#<%=folder.id%>">

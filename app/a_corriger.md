@@ -19,7 +19,6 @@ Formation
 Bug: is comment acceuil est nil crash
 
 Ajouter page d'acceuille certification QUALIOPI + logo
-retirer les commentaires 
 
 TOKEEP
     Méthode Alfoldi
@@ -62,9 +61,6 @@ page formation
     +Image
     RAJOUTER LES TEXTES
 
-ERREUR LIVRE page
-    Rajouter les pdf de 18
-
 IMPLEMENTER YOUTUBE: selement un lien avec la phrase d'acroche sur la page d'acceuil
 
 REFAIRE IN LIFTING A MAILPRO
@@ -99,9 +95,8 @@ la méthode alfoldi
 
 PRE ALPHA
 
-DOSIIER
+DOSSIER
     rajout de photos
     justifier le text
 
-implémenter la formation coordinateur de conférence familiales.
-
+ 

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'statics/methode_alfoldi', to: 'statics#methode_alfoldi'
-  get 'statics/formation', to: 'statics#formation'
+  get 'statics/protection_enfance', to: 'statics#protection_enfance'
   get 'statics/formation_a_distance', to: 'statics#formation_a_distance'
   get 'statics/conseil', to: 'statics#conseil'
   get 'statics/recherche_action', to: 'statics#recherche_action'

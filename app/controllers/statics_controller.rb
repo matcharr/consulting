@@ -2,13 +2,10 @@ class StaticsController < ApplicationController
   def methode_alfoldi
   end
 
-  def formation
+  def protection_enfance
   end
 
   def formation_a_distance
-  end
-
-  def conseil
   end
 
   def recherche_action
