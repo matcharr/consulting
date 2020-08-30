@@ -3,6 +3,14 @@ Using Rails 5.2.4.3
 
 heroku: https://alfoldievaluation-beta.herokuapp.com
 
+<ul>BETA O.O2 || 30/08/2020
+    <li>deivise view presentable</li>
+    <li>statics done with last update from client</li>
+    <li>news letter service linked</li>
+    <li>new favicon</li>
+    <li>folder justifyed</li>
+</ul>
+
 <ul>BETA O.O2 || 27/08/2020
     <li>comment implemented</li>
     <li>asset pipeline implemented</li>
