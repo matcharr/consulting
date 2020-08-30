@@ -14,8 +14,13 @@ class CommentsController < ApplicationController
   end
 
   def update
-    Comment.find(params[:id]).update(content: params[:comment][:content])
-    redirect_to articles_path
+    @comment = Comment.find(params[:id])
+    @comment.update(content: params[:comment][:content])
+    puts "$"*60
+    respond_to do |format|
+      format.html { redirect_to redirect_to articles_path }
+      format.js { }
+    end
   end
 
   def edit

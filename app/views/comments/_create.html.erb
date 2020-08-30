@@ -1,0 +1,9 @@
+      <%= form_with model: @comment ,url: article_comments_path do |f| %>
+        <div class="form_group">
+
+          <%= f.text_area :content, class: "w-100", style: "height: 4em"%>
+        </div>
+        <div class="form_group">
+          <%= f.submit "Poster", class: "btn btn-primary"%>
+        </div>
+      <%end%>

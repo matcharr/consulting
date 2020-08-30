@@ -1,1 +1,14 @@
-document.getElementById("comment#<%=@comment.id%>").remove()
+editA = document.getElementById("comment#<%=@comment.id%>").children[1].children[0]
+
+last = editA.classList.length-1
+
+
+if (editA.classList[last] != "running"){
+  editA.classList.add("running")
+  document.getElementById("comment#<%=@comment.id%>").children[0].children[1].innerHTML = "<%= j render 'comments/edit', comment: @comment %>"
+}else{
+  console.log("have running class")
+  editA.classList.remove("running")
+  document.getElementById("comment#<%=@comment.id%>").children[0].children[1].innerHTML = "<%= @comment.content %>"
+}
+editA.classList.add("running")

@@ -14,9 +14,6 @@ class StaticsController < ApplicationController
   def recherche_action
   end
 
-  def animation_musicale
-  end
-
   def conferences_familiales
   end
 

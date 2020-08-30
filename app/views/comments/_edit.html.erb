@@ -1,25 +1,9 @@
-<div id='comment#<%=comment.id%>'>
-  <div>
-    <h5> <%= comment.user.name %> </h5>
-    <p> <%= comment.content %> </p>
-  </div>
-  <%= form_for @comment do |f| %>
-    <div class="form_group">
-      <label>Commenter :</label>
-      <%unless current_user%>
-        <p class='text-secondary'> Vous devez êtres connecté pour commenter<p>
+      <%= form_with model: @comment ,url: comment_path(@comment.id) do |f| %>
+        <div class="form_group">
+
+          <%= f.text_area :content, class: "w-100", style: "height: 4em"%>
+        </div>
+        <div class="form_group">
+          <%= f.submit "Poster", class: "btn btn-primary"%>
+        </div>
       <%end%>
-      <%= f.text_area :content, class: "w-100", style: "height: 4em"%>
-    </div>
-    <div class="form_group">
-      <%= f.submit "Poster", class: "btn btn-secondary"%>
-    </div>
-  <%end%>
-  <% if current_user && current_user == comment.user || current_user && current_user.administrator%>
-    <div class='d-flex flex-column justify-content-center mr-auto'>
-      <%= link_to "Editer", edit_comment_path(comment.id), class: "text-secondary", remote: true %>      
-      <%= link_to "Supprimer", comment, method: :delete, class: "text-secondary", remote: true %>      
-    </div>
-  <% end %>
-  <hr>
-</div>
