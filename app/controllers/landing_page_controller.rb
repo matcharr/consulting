@@ -1,11 +1,11 @@
 class LandingPageController < ApplicationController
   def index
-    @article = Article.last
+    @folder = Folder.last
     @comments = Hash.new
-    @comments["#{@article}"] = []
-    Comment.where(article: @article).each do |comment|
-      @comments["#{@article}"] << comment
-      puts @comments[:article]
+    @comments["#{@folder}"] = []
+    Comment.where(folder: @folder).each do |comment|
+      @comments["#{@folder}"] << comment
+      puts @comments[:folder]
     end
     @comment = Comment.new
   end

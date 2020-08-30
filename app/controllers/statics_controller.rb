@@ -26,7 +26,7 @@ class StaticsController < ApplicationController
   def livres
   end
 
-  def presse
+  def article
   end
 
   def dico_de_francis

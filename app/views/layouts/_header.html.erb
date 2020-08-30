@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= link_to "Articles", articles_path, class: "nav-link" %>
+        <%= link_to "Dossiers", folders_path, class: "nav-link" %>
       </li>
         <%=link_to "Méthode Alföldi", "/statics/methode_alfoldi", class: "nav-link" %>
       </li>
@@ -16,8 +16,6 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%=link_to "Formation", "/statics/formation", class: "dropdown-item" %>
           <!--<p class="p-0 dropdown-item text-secondary" >Formation à distance</p>-->
-          <%=link_to "Conseil", "/statics/conseil", class: "dropdown-item" %>        
-          <%=link_to "Recherche-action", "/statics/recherche_action", class: "dropdown-item" %>
           <%=link_to "Conférences familiales", "/statics/conferences_familiales", class: "dropdown-item" %>      
         </div>
       </li>
@@ -32,7 +30,7 @@
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%=link_to "Livres", "/statics/livres", class: "dropdown-item" %>
-          <%=link_to "Presse", "/statics/presse", class: "dropdown-item" %>
+          <%=link_to "Articles", "/statics/articles", class: "dropdown-item" %>
           <%=link_to "Dico de Francis", "/statics/dico_de_francis", class: "dropdown-item" %>
         </div>
       </li>

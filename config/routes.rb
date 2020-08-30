@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'statics/temoignages', to: 'statics#temoignages'
   get 'statics/partenaires', to: 'statics#partenaires'
   get 'statics/livres', to: 'statics#livres'
-  get 'statics/presse', to: 'statics#presse'
+  get 'statics/articles', to: 'statics#articles'
   get 'statics/dico_de_francis', to: 'statics#dico_de_francis'
   get 'statics/on_repond_a_vos_questions', to: 'statics#on_repond_a_vos_questions'
   get 'statics/newsletter', to: 'statics#newsletter'
@@ -25,9 +25,9 @@ Rails.application.routes.draw do
 
   resources :landing_page, only: [:index]  
 
-  resources :articles, except: [:show]
+  resources :folders, except: [:show]
 
-  resources :articles do
+  resources :folders do
     resources :comments, only: [:create]
   end
 

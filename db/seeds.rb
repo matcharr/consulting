@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-Article.destroy_all
+Folder.destroy_all
 
 User.create(name: 'Bobo', email: 'balfoldi@yahoo.fr', password: '123123', administrator: true)
 User.create(name: 'HarleyBoy', email: 'falfoldi@gmail.com', password: '123123', administrator: true)
@@ -17,9 +17,9 @@ User.create(name: 'HarleyBoy', email: 'falfoldi@gmail.com', password: '123123', 
 end
 
 10.times do
-    Article.create(title: Faker::Lorem.characters(number: rand(3..12)), content: Faker::Lorem.paragraph(sentence_count: 20..100))
+    Folder.create(title: Faker::Lorem.characters(number: rand(3..12)), content: Faker::Lorem.paragraph(sentence_count: 20..100))
     rand(4).times do
-        Comment.create(user: User.all.sample, article: Article.last, content: Faker::Lorem.paragraph(sentence_count: 4..8))
+        Comment.create(user: User.all.sample, folder: Folder.last, content: Faker::Lorem.paragraph(sentence_count: 4..8))
     end
 end
 
