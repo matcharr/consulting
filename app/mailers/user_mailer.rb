@@ -1,6 +1,13 @@
 class UserMailer < ApplicationMailer
     default from: 'no-reply@monsite.fr'
    
+    def question_email(name, email, body)
+      @name = name
+      @body = body
+      @email = email
+      mail(to: "falfoldi@gmail.com", subject: "Question de #{@name}") 
+    end
+
     def welcome_email(user)
       #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
       @user = user

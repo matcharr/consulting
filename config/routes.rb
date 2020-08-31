@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'statics/methode_alfoldi', to: 'statics#methode_alfoldi'
   get 'statics/protection_enfance', to: 'statics#protection_enfance'
   get 'statics/formation_a_distance', to: 'statics#formation_a_distance'
@@ -22,6 +23,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   root "landing_page#index"
+
+  resources :admin_mail, only: [:create, :new]
 
   resources :landing_page, only: [:index]  
 

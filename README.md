@@ -9,6 +9,7 @@ heroku: https://alfoldievaluation-beta.herokuapp.com
     <li>news letter service linked</li>
     <li>new favicon</li>
     <li>folder justifyed</li>
+    <li>pluged contact mailer</li>
 </ul>
 
 <ul>BETA O.O2 || 27/08/2020
