@@ -1,11 +1,11 @@
 class UserMailer < ApplicationMailer
-    default from: 'no-reply@monsite.fr'
+    default from: 'boalfoldi@gmail.com'
    
     def question_email(name, email, body)
       @name = name
       @body = body
       @email = email
-      mail(to: "falfoldi@gmail.com", subject: "Question de #{@name}") 
+      mail(to: "falfoldi@yopmail.com", subject: "Question de #{@name}") 
     end
 
     def welcome_email(user)

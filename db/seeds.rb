@@ -13,7 +13,8 @@ User.create(name: 'Bobo', email: 'balfoldi@yahoo.fr', password: '123123', admini
 User.create(name: 'HarleyBoy', email: 'falfoldi@gmail.com', password: '123123', administrator: true)
 
 10.times do
-    User.create(name: Faker::Name.first_name, email: Faker::Internet.email, password: "123123")
+    first_name = Faker::Name.first_name
+    User.create(name: first_name, email: first_name + "@yopmail.fr", password: "123123")
 end
 
 10.times do
