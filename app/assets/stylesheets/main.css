@@ -11,10 +11,10 @@
 }
 
 .fat-hero-image{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("fat_hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("the-climate-reality-project-Hb6uWq0i4MI-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 250px;
+    height: 350px;
  }

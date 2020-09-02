@@ -1,53 +1,50 @@
 <%= render 'banner_welcome'%>
-
-<div class='d-flex flex-wrap container mt-5' style='height: 100%'>
-
-  <div class='col'>
-    <p>Francis Alföldi travaille sur l'évaluation et ses pratiques dans le secteur social. <br>Le cabinet Alföldi  est structuré en SAS.</p>
-    <div class=' d-flex flex-wrap justify-content-around'>
-      <div class='align-self-center'>
-        <h5>Un artisan du social vous propose</h5>
-        <ul>
-          <li> ses formations, </li>
-          <li>des publications, </li>
-          <li>des travaux de recherches, </li>
-          <li>un accompagnement, </li>
-          <li>du travail à la carte.</li>
-        </ul>
+<div class='container'>
+  <div class='d-flex flex-wrap mt-5'>
+    <div class='col '>
+      <p>Francis Alföldi travaille sur l'évaluation et ses pratiques dans le secteur social. <br>Le cabinet Alföldi  est structuré en SAS.</p>
+      <div class=' d-flex flex-wrap justify-content-around'>
+        <div class='align-self-center'>
+          <h5>Un artisan du social vous propose</h5>
+          <ul>
+            <li> ses formations, </li>
+            <li>des publications, </li>
+            <li>des travaux de recherches, </li>
+            <li>un accompagnement, </li>
+            <li>du travail à la carte.</li>
+          </ul>
+          <a href="<%= statics_methode_alfoldi_path %>"> <%= image_tag "Logo Méthode Alfoldi fond blanc.jpg", class: 'm-2 img-fluid border rounded', style: 'width: 10em;' %></a>
+        </div>
+        <%= image_tag "francis_half.jpg", class: 'm-2 img-fluid border rounded', style: 'height: 15em;' %>
       </div>
-          <%= image_tag "francis_half.jpg", class: 'm-2 img-fluid border rounded', style: 'width: 10em;' %>
+      <hr />
+      <div class='row'>
+        <%= image_tag "Logo_20Qualiopi-72dpi-Web-56.png", class: 'm-2 img-fluid border rounded', style: 'width: 10em;' %>
+        <p class='align-self-center m-0'>La certification qualité a été délivrée au titre<br> de la catégorie d'actions suivantes : actions de formation.</p>
+      </div>    
+      <hr />
+      <div class=' d-flex flex-wrap justify-content-around'>
+        <div class=' d-flex flex-column'>
+        </div>
+      </div>
     </div>
-    <hr>
-    <div class='row'>
-      <%= image_tag "Logo_20Qualiopi-72dpi-Web-56.png", class: 'm-2 img-fluid border rounded', style: 'width: 10em;' %>
-      <p class='align-self-center m-0'>La certification qualité a été délivrée au titre<br> de la catégorie d'actions suivantes : actions de formation.</p>
-    </div>    
-    <hr>
-    <div class=' d-flex flex-wrap justify-content-around'>
-      <p class=' align-self-center'>Auteur de <a href='https://www.dunod.com/sciences-humaines-et-sociales/evaluer-en-protection-enfance-theorie-et-methodes' target='_blank'><b>"Évaluer en protection de l'enfance"</b></a><br> avec plus de 11.000 milles exemplaires vendus.</p>
-      <div class=' d-flex flex-column'>
-        <a href='https://www.dunod.com/sciences-humaines-et-sociales/evaluer-en-protection-enfance-theorie-et-methodes' target='_blank'>
-        <%= image_tag "books/EPE_205_C3_A8_20_C3_A9d_0.jpg", class: 'm-2 img-fluid border rounded', style: 'width: 10em;' %>
-        </a>
+    <div class='col'>
+      <div class='card'>
+        <div class='card-header'>
+          <h3>Formation en ligne</h3>
+          <h5 class='text-secondary'>Un produit inédit du cabinet Alföldi.</h5>
+        </div>
+        <div class='card-body'>
+          <p>- 10 modules + 25 vidéos, des contenus détaillés, avec des exemples, des mises en situation téléchargeables pour que tu puisses les regarder à tout moment.</p>
+          <P>- le livre de référence offert avec la formation, un recours permanent avec des contenus approfondis : développement théorique et boîte à outil.</p>
+          <P>- un engagement par l'apprenant, à produire des travaux pratiques et des QCM pour obtenir plus qu'une simple attestation de présence : gagner le certificat de réalisation de la formation à la méthode Alföldi.</p>
+          <P>- la remise intégrale de tous les outils constitutifs de la méthode avec une possibilité réelle d’appliquer au sortir de la formation.</p>
+          <P>- un suivi personnalisé :  4 séances de coaching individualisé d’une demi-heure, correction du premier rapport avec retour écrit, accès au groupe  privé WhatsApp, accès au webinar bimensuel de supervision à la méthode Alfoldi.</p>
+        </div>     
+        <div class='card-footer'>
+          <a href='https://falfoldi.systeme.io/a5fdd29d' target="_blank" class="btn btn-info">En savoir plus</a>
       </div>
     </div>
   </div>
-  <div class='col'>
-    <div class='card'>
-      <div class='card-header'>
-        <h3>Formation en ligne</h3>
-        <h5 class='text-secondary'>Un produit inédit du cabinet Alföldi.</h5>
-      </div>
-      <div class='card-body'>
-        <p>- 10 modules + 25 vidéos, des contenus détaillés, avec des exemples, des mises en situation téléchargeables pour que tu puisses les regarder à tout moment.</p>
-        <P>- le livre de référence offert avec la formation, un recours permanent avec des contenus approfondis : développement théorique et boîte à outil.</p>
-        <P>- un engagement par l'apprenant, à produire des travaux pratiques et des QCM pour obtenir plus qu'une simple attestation de présence : gagner le certificat de réalisation de la formation à la méthode Alföldi.</p>
-        <P>- la remise intégrale de tous les outils constitutifs de la méthode avec une possibilité réelle d’appliquer au sortir de la formation.</p>
-        <P>- un suivi personnalisé :  4 séances de coaching individualisé d’une demi-heure, correction du premier rapport avec retour écrit, accès au groupe  privé WhatsApp, accès au webinar bimensuel de supervision à la méthode Alfoldi.</p>
-      </div>     
-    </div>
-  </div>
-  <!--
-  <h1 class='text-secondary'>Dernier dossier :</h1>
-  <%= render "folders/show", folder: @folder%>-->
+</div>
 </div>

@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   get 'statics/livres', to: 'statics#livres'
   get 'statics/articles', to: 'statics#articles'
   get 'statics/dico_de_francis', to: 'statics#dico_de_francis'
-  get 'statics/on_repond_a_vos_questions', to: 'statics#on_repond_a_vos_questions'
+  get 'statics/contact', to: 'statics#contact'
   get 'statics/newsletter', to: 'statics#newsletter'
+  get 'statics/mentions_legales', to: 'statics#mentions_legales'
 
   match 'download', to: 'statics#download_dico_de_francis', as: 'download', via: :get
 

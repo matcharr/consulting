@@ -1,4 +1,8 @@
 class StaticsController < ApplicationController
+
+  def mentions_legales
+  end
+
   def methode_alfoldi
   end
 
@@ -27,9 +31,6 @@ class StaticsController < ApplicationController
   end
 
   def dico_de_francis
-  end
-
-  def on_repond_a_vos_questions
   end
 
   def newsletter
