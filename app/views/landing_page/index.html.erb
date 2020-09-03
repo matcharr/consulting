@@ -1,8 +1,8 @@
 <%= render 'banner_welcome'%>
 <div class='container'>
-  <div class='d-flex flex-wrap mt-5'>
-    <div class='col '>
-      <p>Francis Alföldi travaille sur l'évaluation et ses pratiques dans le secteur social. <br>Le cabinet Alföldi  est structuré en SAS.</p>
+  <div class='d-flex flex-wrap mt-2'>
+    <div class='col pt-4 d-flex flex-column justify-content-between'>
+      <p class='mt-4'>Francis Alföldi travaille sur l'évaluation et ses pratiques dans le secteur social. <br>Le cabinet Alföldi  est structuré en SAS.</p>
       <div class=' d-flex flex-wrap justify-content-around'>
         <div class='align-self-center'>
           <h5>Un artisan du social vous propose</h5>
@@ -17,12 +17,14 @@
         </div>
         <%= image_tag "francis_half.jpg", class: 'm-2 img-fluid border rounded', style: 'height: 15em;' %>
       </div>
-      <hr />
+  
       <div class='row'>
+        <hr />
         <%= image_tag "Logo_20Qualiopi-72dpi-Web-56.png", class: 'm-2 img-fluid border rounded', style: 'width: 10em;' %>
         <p class='align-self-center m-0'>La certification qualité a été délivrée au titre<br> de la catégorie d'actions suivantes : actions de formation.</p>
+        <hr />
       </div>    
-      <hr />
+
       <div class=' d-flex flex-wrap justify-content-around'>
         <div class=' d-flex flex-column'>
         </div>
@@ -30,19 +32,23 @@
     </div>
     <div class='col'>
       <div class='card'>
-        <div class='card-header'>
-          <h3>Formation en ligne</h3>
-          <h5 class='text-secondary'>Un produit inédit du cabinet Alföldi.</h5>
+        <div class='card-header d-flex flex-row justify-content-between'>
+          <h4>Témoignage</h4>
         </div>
-        <div class='card-body'>
-          <p>- 10 modules + 25 vidéos, des contenus détaillés, avec des exemples, des mises en situation téléchargeables pour que tu puisses les regarder à tout moment.</p>
-          <P>- le livre de référence offert avec la formation, un recours permanent avec des contenus approfondis : développement théorique et boîte à outil.</p>
-          <P>- un engagement par l'apprenant, à produire des travaux pratiques et des QCM pour obtenir plus qu'une simple attestation de présence : gagner le certificat de réalisation de la formation à la méthode Alföldi.</p>
-          <P>- la remise intégrale de tous les outils constitutifs de la méthode avec une possibilité réelle d’appliquer au sortir de la formation.</p>
-          <P>- un suivi personnalisé :  4 séances de coaching individualisé d’une demi-heure, correction du premier rapport avec retour écrit, accès au groupe  privé WhatsApp, accès au webinar bimensuel de supervision à la méthode Alfoldi.</p>
-        </div>     
-        <div class='card-footer'>
-          <a href='https://falfoldi.systeme.io/a5fdd29d' target="_blank" class="btn btn-info">En savoir plus</a>
+        <div class='card-body font-italic'>
+          <p>"C'est en 2000, à l'occasion du décès tragique d'un enfant tué par son père toxicomane, qu'en Ardèche nous avons pris conscience de l'importance primordiale de la question de l'évaluation clinique en protection de l'enfance. </p>
+          <p>Cet événement traumatisant a conduit les acteurs principaux du dispositif, Parquet, Juges des Enfants, Education Nationale, PJJ et Conseil général, à engager un travail de fond sur la promotion d'une culture commune de l'évaluation clinique basée sur un référentiel sérieux, partagé par tous.    </p>
+          <p>Francis Alföldi venait de terminer son premier bouquin sur cette thématique, et même en cherchant bien, nous n'avons trouvé dans la littérature professionnelle aucun ouvrage capable de proposer de façon convainquante d'autres modèles de référentiel. Nous lui avons donc demandé de construire avec nous un module de formation destiné à l'ensemble des acteurs agissant dans le département auprès d'enfants à titre professionnel.    </p>
+          <p>Depuis, ce sont chaque année une vingtaine de professionnels qui participent activement à ces formations, reconduites par chaque nouveau Schéma depuis 2000. Et chaque année, nous construisons un peu plus avec Francis Alföldi cette culture commune qui permet aux acteurs de parler de la même chose lorsqu'on parle d'un enfant "en danger"...</p></p>
+        </div>
+        <div class='card-footer d-flex flex-row justify-content-between'>
+          <div>
+            <i><strong><h6>-Guy Patriarca </h6></strong>
+              <p>Directeur Enfance Santé Famille <br>
+              Conseil Général de l'Ardèche - Privas</p>
+            </i>
+          </div>
+          <%= link_to "Voire tous les témoignages", statics_temoignages_path, class: "mb-2 btn btn-primary align-self-end"%>
       </div>
     </div>
   </div>
