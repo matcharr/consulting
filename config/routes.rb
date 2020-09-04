@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   #previous_statics
   get '/methodealfoldi.html', to: 'statics#methode_alfoldi'
+  get '/francisalfoldi.html', to: 'statics#methode_alfoldi'
 
   #current_static
   get 'statics/methode_alfoldi', to: 'statics#methode_alfoldi'
