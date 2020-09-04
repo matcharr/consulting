@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  #previous_statics
+  get '/methodealfoldi.html', to: 'statics#methode_alfoldi'
 
+  #current_static
   get 'statics/methode_alfoldi', to: 'statics#methode_alfoldi'
   get 'statics/protection_enfance', to: 'statics#protection_enfance'
   get 'statics/formation_a_distance', to: 'statics#formation_a_distance'
