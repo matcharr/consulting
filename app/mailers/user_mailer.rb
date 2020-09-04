@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
       @name = name
       @body = body
       @email = email
-      mail(to: "falfoldi@yopmail.com", subject: "Question de #{@name}") 
+      mail(to: "balfoldi@yahoo.fr", subject: "Question de #{@name}") 
     end
 
     def welcome_email(user)
