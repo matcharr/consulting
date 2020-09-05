@@ -5,10 +5,10 @@ class CommentsController < ApplicationController
   def create
     puts "$"*100
     puts params
-    @article = Article.find(params[:article_id])
-    @comment = Comment.create(content: params[:comment][:content], user: current_user, article: @article)
+    @folder = Folder.find(params[:folder_id])
+    @comment = Comment.create(content: params[:comment][:content], user: current_user, folder: @folder)
     respond_to do |format|
-      format.html { redirect_to articles_path }
+      format.html { redirect_to folder_path }
       format.js { }
     end
   end
@@ -18,14 +18,14 @@ class CommentsController < ApplicationController
     @comment.update(content: params[:comment][:content])
     puts "$"*60
     respond_to do |format|
-      format.html { redirect_to redirect_to articles_path }
+      format.html { redirect_to redirect_to folders_path }
       format.js { }
     end
   end
 
   def edit
     @comment = Comment.find(params[:id])
-    @article = @comment.article
+    @folder = @comment.folder
     respond_to do |format|
       format.html { redirect_to edit_comment_path(@comment.id) }
       format.js { }
@@ -36,7 +36,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to articles_path }
+      format.html { redirect_to folders_path }
       format.js { }
     end
   end
