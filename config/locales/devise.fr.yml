@@ -15,7 +15,7 @@ fr:
               blank: manquant.
               too_short: doit faire plus de 3 characters
             password_confirmation:
-              confirmation:
+              confirmation: doit être identique
             current_password:
               blank: manquant.
   errors:
