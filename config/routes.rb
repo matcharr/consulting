@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/methodealfoldi.html', to: 'statics#methode_alfoldi'
   get '/francisalfoldi.html', to: 'statics#methode_alfoldi'
   get '/conferencegesticulee.html', to: 'statics#methode_alfoldi'
-  
+
   #current_static
   get 'statics/methode_alfoldi', to: 'statics#methode_alfoldi'
   get 'statics/protection_enfance', to: 'statics#protection_enfance'
@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   
   root "landing_page#index"
 
-  resources :admin_mail, only: [:create, :new]
+  resources :admin_mail, only: [:new, :create]
 
   resources :landing_page, only: [:index]  
 

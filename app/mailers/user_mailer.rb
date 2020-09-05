@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-    default from: 'balfoldi@yahoo.fr'
+    default from: 'support@alfoldievaluation.com'
    
     def question_email(name, email, body)
       @name = name

@@ -12,10 +12,10 @@ Folder.destroy_all
 User.create(name: 'Bobo', email: 'balfoldi@yahoo.fr', password: '123123', administrator: true)
 User.create(name: 'HarleyBoy', email: 'falfoldi@gmail.com', password: '123123', administrator: true)
 
-10.times do
-    first_name = Faker::Name.first_name
-    User.create(name: first_name, email: first_name + "@yopmail.fr", password: "123123")
-end
+#10.times do
+#    first_name = Faker::Name.first_name
+#    User.create(name: first_name, email: first_name + "@yopmail.fr", password: "123123")
+#end
 
 10.times do
     Folder.create(title: Faker::Lorem.characters(number: rand(3..12)), content: Faker::Lorem.paragraph(sentence_count: 20..100))

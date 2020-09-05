@@ -19,7 +19,16 @@
         </div>
         <div class='card-body'>
           <%= form_with(url: admin_mail_index_path, class: "d-flex flex-column") do %>
-            <% if !current_user %>
+            <% if current_user %>
+              <div>
+                <%= label_tag(:last_name, "Nom:") %><br />
+                <%= text_field_tag(:first_name, current_user.name) %>
+              </div>
+              <div>
+                <%= label_tag(:email, "Courriel:") %><br />
+                <%= text_field_tag(:email, current_user.email) %><br />
+              </div>
+            <% else %>
               <div>
                 <%= label_tag(:first_name, "Prénom:") %><br />
                 <%= text_field_tag(:first_name) %>
@@ -31,18 +40,9 @@
               <div>
                 <%= label_tag(:email, "Courriel:") %><br />
                 <%= text_field_tag(:email) %><br />
-              </div>
-            <% else %>
-              <div>
-                <%= label_tag(:last_name, "Nom:") %><br />
-                <%= text_field_tag(:first_name, current_user.name) %>
-              </div>
-              <div>
-                <%= label_tag(:email, "Courriel:") %><br />
-                <%= text_field_tag(:email, current_user.email) %><br />
-              </div>
+              </div>              
             <% end %>
-            <%= label_tag(:email, "Message:", class: "mt-2") %><br />
+            <%= label_tag(:body, "Message:", class: "mt-2") %><br />
             <%= text_area_tag(:body) %>
             </div>
             <div class='card-footer'>
