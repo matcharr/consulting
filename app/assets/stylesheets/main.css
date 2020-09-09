@@ -1,20 +1,25 @@
 .btn{
-    margin: 2px;
+  margin: 2px;
 }
 
 .card{
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .nav-link{
-    margin-left: 2em;
+  margin-left: 2em;
 }
 
 .fat-hero-image{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1503428593586-e225b39bddfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 350px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1503428593586-e225b39bddfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 350px;
  }
+
+p{
+  text-align: justify;
+  text-justify: inter-word; 
+}

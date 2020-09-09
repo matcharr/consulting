@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MethodAlfoldi</title>
+    <title>Alföldi Evaluation</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="https://kit.fontawesome.com/46962466a1.js" crossorigin="anonymous"></script>
     <%= favicon_link_tag image_path('favicon.ico') %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+
   </head>
 
   <body class='py-0'>
@@ -17,5 +16,6 @@
     <%= yield %>
     <%= render 'layouts/footer'%>
   </body>
-
+    <%= javascript_include_tag 'application'%>
+  
 </html>

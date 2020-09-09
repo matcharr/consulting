@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/methodealfoldi.html', to: 'statics#methode_alfoldi'
   get '/francisalfoldi.html', to: 'statics#methode_alfoldi'
   get '/conferencegesticulee.html', to: 'statics#methode_alfoldi'
+  get '/contact.html', to: 'admin_mail#new'
+
 
   #current_static
   get 'statics/methode_alfoldi', to: 'statics#methode_alfoldi'
@@ -21,14 +23,17 @@ Rails.application.routes.draw do
   get 'statics/contact', to: 'statics#contact'
   get 'statics/newsletter', to: 'statics#newsletter'
   get 'statics/mentions_legales', to: 'statics#mentions_legales'
+  get 'statics/presentation', to: 'statics#presentation'
 
   match 'download', to: 'statics#download_dico_de_francis', as: 'download', via: :get
-
+  
   devise_for :users
   get 'landing_page/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   root "landing_page#index"
+
+  resources :devise_test, only: [:create]
 
   resources :admin_mail, only: [:new, :create]
 

@@ -9,7 +9,7 @@
       <% end %>
     </div>
     <div class='card-body text-justify'>
-      <%= folder.content%>
+      <%= folder.content.html_safe %>
     </div>
       <div class='card-footer'>
       <div id="folder#<%=folder.id%>">

@@ -36,6 +36,9 @@ class StaticsController < ApplicationController
   def newsletter
   end
 
+  def presentation
+  end
+
   def download_dico_de_francis
     send_file 'public/dico_de_francis/Dico_20de_20Francis___04_01_2019.doc', type: 'application/msword', status: 202
   end

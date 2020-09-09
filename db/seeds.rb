@@ -18,7 +18,13 @@ User.create(name: 'HarleyBoy', email: 'falfoldi@gmail.com', password: '123123', 
 #end
 
 10.times do
-    Folder.create(title: Faker::Lorem.characters(number: rand(3..12)), content: Faker::Lorem.paragraph(sentence_count: 20..100))
+    content = ""
+    rand(5..10).times do
+        title = rand(1..6)
+        content += "<h#{title}>#{Faker::Lorem.characters(number: rand(3..12))}</h#{title}>"
+        content += "<p>#{Faker::Lorem.sentence(word_count: rand(40..100))}</p>"
+    end
+    Folder.create(title: Faker::Lorem.characters(number: rand(3..12)), content: content)
     rand(4).times do
         Comment.create(user: User.all.sample, folder: Folder.last, content: Faker::Lorem.paragraph(sentence_count: 4..8))
     end
