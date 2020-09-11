@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/francisalfoldi.html', to: 'statics#methode_alfoldi'
   get '/conferencegesticulee.html', to: 'statics#methode_alfoldi'
   get '/contact.html', to: 'admin_mail#new'
+  get '/prestations.html', to: 'statics#protection_enfance'
+  get '/index.html', to: 'landing_page#index'
 
 
   #current_static
