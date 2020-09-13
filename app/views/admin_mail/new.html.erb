@@ -17,10 +17,11 @@
         <div class='card-header'>
           <h4>Nous poser une question</h4>
         </div>
-        <div class='card-body'>
-          <%= form_with(url: admin_mail_index_path, class: "d-flex flex-column") do %>
+        <div class='card-body pt-0 pb-5'>
+          <%= form_with(url: admin_mail_index_path, class: "d-flex flex-column",remote: false ) do %>
+            <%= invisible_captcha %>
             <% if current_user %>
-              <div>
+              <div class='first_name'>
                 <%= label_tag(:last_name, "Nom:") %><br />
                 <%= text_field_tag(:first_name, current_user.name) %>
               </div>
@@ -29,7 +30,7 @@
                 <%= text_field_tag(:email, current_user.email) %><br />
               </div>
             <% else %>
-              <div>
+              <div class="m-0">
                 <%= label_tag(:first_name, "Prénom:") %><br />
                 <%= text_field_tag(:first_name) %>
               </div>
@@ -43,7 +44,7 @@
               </div>              
             <% end %>
             <%= label_tag(:body, "Message:", class: "mt-2") %><br />
-            <%= text_area_tag(:body) %>
+            <%= text_area_tag(:body,"") %>
             </div>
             <div class='card-footer'>
               <%= submit_tag("Envoyer", class: 'btn btn-outline-info' )%>

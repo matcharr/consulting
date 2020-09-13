@@ -70,3 +70,5 @@ gem 'activerecord'
 gem 'table_print'
 gem 'faker'
 gem 'bcrypt'
+
+gem 'invisible_captcha'
