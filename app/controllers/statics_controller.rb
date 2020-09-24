@@ -7,15 +7,16 @@ class StaticsController < ApplicationController
   end
 
   def protection_enfance
-  end
-
-  def formation_a_distance
-  end
-
-  def recherche_action
+    @holder = Holder.new
+    @urls = holder_urls(Holder.all)
+    @holders = holder_where(["protection de l\'enfance","formation"])
   end
 
   def conferences_familiales
+    @holder = Holder.new
+    @holders_formation = holder_where(["conferences familiales","formation"])
+    @holders_article = holder_where(["conferences familiales","article"])
+    @urls = holder_urls(Holder.all)
   end
 
   def temoignages
@@ -27,7 +28,10 @@ class StaticsController < ApplicationController
   def livres
   end
 
-  def article
+  def articles
+    @holder = Holder.new
+    @urls = holder_urls(Holder.all)
+    @holders = holder_where(["article"])
   end
 
   def dico_de_francis

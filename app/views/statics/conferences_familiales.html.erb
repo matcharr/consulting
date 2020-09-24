@@ -12,7 +12,7 @@
         <br/>
         2017, expérimentation avec le d"épartement de l'Ardèche de deux premières conférences, l'occasion d'un nouvel article pour décrire les premiers pas d'un coordinateur.
         </p>
-        <p><i>Les conférences familiales viennent des pratiques ancestrales des Maori, ils avaient pour coutume de  se réunir dans un marae (photo de droite) pour résoudre les difficultés de la vie dans une communauté. Ils s'attaquaient au problème, en prenaient collectivement la responsabilité, et ne cherchaient pas à  désigner un coupable. </i></p>
+        <p><i>Les conférences familiales viennent des pratiques ancestrales des Maori, ils avaient pour coutume de  se réunir dans un marae <!--(photo de droite)--> pour résoudre les difficultés de la vie dans une communauté. Ils s'attaquaient au problème, en prenaient collectivement la responsabilité, et ne cherchaient pas à  désigner un coupable. </i></p>
       </div>
       <hr>
       <div class='row'>
@@ -27,38 +27,17 @@
       <div class='card'>
         <div class='card-header'>
         <h4>Formations :</h4>
+          <%= render 'holders/form', holder: @holder, section: '["conferences familiales","formation"]'%>
         </div>
-        <div class='card-body'>
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/FGC_Sensibilisation.pdf", :target => "_blank"%>
-            <p class='ml-2 mb-0 align-self-center'>Sensibilisation aux conférences familiales.</p>
-          </div>
-          <hr>      
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/FGC_Coordinateur_4_jours.pdf", :target => "_blank"%>
-            <p class='ml-2 mb-0 align-self-center'>Coordinateur de conférence familiale</p>
-          </div>            
+        <div class='card-body' id="conferences familiales, formation" >
+          <%=render 'holders/index', holders: @holders_formation%>         
         </div>
-      </div>
-      <div class='card'>
-        <div class='card-header'>
+        <div class='card-header border-top' >
           <h4>Articles :</h4>
+          <%= render 'holders/form', holder: @holder, section: '["conferences familiales","article"]'%>
         </div>
-        <div class='card-body'>    
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/articles/2002_DOSSIER_20FGC_20ACTIF.pdf", :target => "_blank"%>
-            <p class='ml-2 mb-0 align-self-center'>ALFOLDI Francis, 2002, dossier « La pratique du Family Group Conferencing en protection de l’enfance », Les Cahiers de l’Actif, n°318/319, p.9-133.</p>
-          </div>
-          <hr>
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/articles/2003_LE_20DERRIERE_20DE_20L_27ELEPHANT.pdf", :target => "_blank"%>
-            <p class='ml-2 mb-0 align-self-center'>ALFOLDI Francis, 2003, « Pourquoi les français ne s'intéresent pas au Family Group Conferencing ? Un coup de pied au derrière de l'éléphant », Les Cahiers de l’Actif, n°330/331, p.129-133.</p>
-          </div>
-          <hr>
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/articles/2018_LES_20CONFERENCES_20FAMILIALES_20EN_20ARDECHE.pdf", :target => "_blank"%>
-            <p class='ml-2 mb-0 align-self-center'>ALFÖLDI Francis, 2018, «  Les conférences familiales en Ardèche -  premiers pas d'un coordinateur », Les Cahiers de l'Actif, n°504/505, n°506-507, p.287-326</p>
-          </div>  
+        <div class='card-body' id='conferences familiales, article'>    
+          <%=render 'holders/index', holders: @holders_article%>
         </div>
       </div>
     </div> 

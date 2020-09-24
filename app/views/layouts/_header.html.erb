@@ -43,7 +43,7 @@
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%=link_to "Support", new_admin_mail_path, class: "dropdown-item" %>
-          <%=link_to "Newsletter", "/statics/newsletter", class: "dropdown-item" %>
+          <%=link_to "Newsletter", newsletters_path, class: "dropdown-item" %>
         </div>
       </li>
       </ul>
@@ -55,7 +55,7 @@
           </a>
           <% if user_signed_in? %>
             <div class="dropdown-menu" aria-labelledby="userDropdown">
-              <!--<%= link_to "Editer mon compte", edit_user_registration_path, class: "dropdown-item"%>-->
+              <%= link_to "Editer mon compte", edit_user_registration_path, class: "dropdown-item"%>
               <%= link_to "Se déconnecter", destroy_user_session_path, :method => :delete, class: "dropdown-item"%>
             </div>
           <% else %>

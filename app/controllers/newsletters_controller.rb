@@ -1,0 +1,44 @@
+class NewslettersController < ApplicationController
+  before_action :set_newsletter, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @newsletters = Newsletter.all
+  end
+
+  def show
+  end
+
+  def new
+    @newsletter = Newsletter.new
+  end
+
+
+  def edit
+  end
+
+  def create
+    @newsletter = Newsletter.create(newsletter_params)
+    redirect_to newsletters_path
+  end
+
+  def update
+    @newsletter.update(newsletter_params)
+    redirect_to newsletters_path
+  end
+
+  def destroy
+    @newsletter.destroy
+    redirect_to newsletters_path
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_newsletter
+      @newsletter = Newsletter.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def newsletter_params
+      params.require(:newsletter).permit(:object, :body)
+    end
+end

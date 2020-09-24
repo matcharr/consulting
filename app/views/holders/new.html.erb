@@ -1,0 +1,40 @@
+<div class='container'>
+  <%= form_with model: @holder, local:true do |f| %>
+    <div class='form-group'>
+      <%= f.label :title, "Titre" %>
+      <%= f.text_field :title, class: 'form-control'%>
+    </div>  
+    <div class='form-group'>
+      <%= f.label :pdf, "Fichier" %>
+      <%= f.fields_for :pdf  do |p| %>
+          <%= p.file_field :pdf , :multiple => true, name: :pdf %>
+      <% end %>    
+    </div>
+    <div class='form-group'>
+      <%= check_box_tag 'holder[protection de l\'enfance][]', @holder.id %>
+      <%= label_tag "Protection de l\'enfance"%>
+    </div>
+    <div class='form-group'>
+      <%= check_box_tag 'holder[formation][]', @holder.id %>
+      <%= label_tag "Formation"%>
+    </div>    
+    <div class='form-group'>
+      <%= check_box_tag 'holder[article][]', @holder.id %>
+      <%= label_tag "Article"%>
+    </div>    
+    <div class='form-group'>
+      <%= check_box_tag 'holder[conferences familiales][]', @holder.id %>
+      <%= label_tag "Conferences familiales"%>
+    </div>        
+    <%= f.submit "Envoyer", class: "btn btn-primary"%>
+  <%end%>
+
+<% @holders.reverse_each do |holder| %>
+  <hr>
+  <h4><%=holder.title%></h4>
+  <ul>
+    <li>Section : <%= holder.section_string %></li>
+    <li><%= link_to "télécharger", @urls["#{holder.id}"], target: "_blank"%></li>
+  </ul>
+<%end%>
+</div>

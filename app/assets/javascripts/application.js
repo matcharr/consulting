@@ -15,3 +15,4 @@
 //= require jquery.min
 //= require bootstrap.bundle.min
 //= require main
+//= require quill.global

@@ -1,0 +1,2 @@
+console.log('<%=@holder.section_string%>')
+document.getElementById('<%=@holder.section_string%>').insertAdjacentHTML("afterbegin","<%= j render "holders/show", holder: @holder %><hr>")

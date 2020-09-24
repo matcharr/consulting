@@ -1,0 +1,10 @@
+<div>
+  <% if holders%>
+    <% holders.reverse_each do |holder|%>
+      <div class='d-flex' id="holder#<%=holder.id%>">
+        <%=render "holders/show", holder: holder%>
+      </div> 
+      <%= "<hr>".html_safe unless holders[0] == holder %>
+    <%end%>
+  <%end%>
+</div>

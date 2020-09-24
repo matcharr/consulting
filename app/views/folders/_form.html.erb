@@ -1,15 +1,34 @@
+
 <div class='card'>
   <%= form_for @folder do |f| %>
     <div class="form_group card-header">
       <label> Titre du dossier</label></br>
-      <%= f.text_field :title, class: 'form_control w-25'%>
-    </div>
-    <div class="form_group card-body">
-      <label> Contenu du dossier </label>
-      <%= f.text_area :content, class: 'form_control w-100', style: "height: 700px"%>
-    </div>
-    <div class="form_group card-footer">
+      <%= f.text_field :title, class: 'form_control mb-3 w-25'%>
+      <%= f.hidden_field :content, id: "post-quill", required: true %>
+      <div id="editor-container" hidden="true"></div>
+      <div id="editor"></div>
       <button type="submit", class='btn btn-primary'> Envoyer </button>
+      <script>
+        var form = document.querySelector('#<%=form%>');
+        var quill = new Quill('#editor', {
+          theme: 'snow',
+          modules: {
+          toolbar: [
+            [{ 'header': [1, 2, 3, false] }],
+            [{ 'color': [] }, { 'background': [] }],
+            ['bold', 'italic', 'underline', 'strike'],
+            ['blockquote', 'code-block'],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'indent': '-1'}, { 'indent': '+1' }],
+            ['clean']
+          ]
+        }
+        });
+        form.onsubmit = function() {
+          document.querySelector('#post-quill').value = form.querySelector(".ql-editor").innerHTML;
+        };
+        form.querySelector(".ql-editor").innerHTML = document.querySelector('#post-quill').value
+      </script>  
     </div>
   <%end%>
 </div>

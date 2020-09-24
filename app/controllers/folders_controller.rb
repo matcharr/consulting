@@ -9,7 +9,6 @@ class FoldersController < ApplicationController
     @folders = Folder.all
     @comment = Comment.new
     @comments = Hash.new
-
     @folders.each do |folder|
       @comments["#{folder}"] = []
       Comment.where(folder: folder).each do |comment|
@@ -17,10 +16,6 @@ class FoldersController < ApplicationController
         puts @comments[:folder]
       end
     end
-    
-    puts @comments
-
-    #comment#new
     @comment = Comment.new
   end
 

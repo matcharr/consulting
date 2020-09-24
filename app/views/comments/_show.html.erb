@@ -1,6 +1,6 @@
 <div id='comment#<%=comment.id%>'>
   <div>
-    <h5> <%= comment.user.name %> </h5>
+    <h5> <%= "#{comment.user.first_name} #{comment.user.last_name}" %> </h5>
     <p> <%= comment.content %> </p>
   </div>
   <% if current_user && current_user == comment.user || current_user && current_user.administrator%>

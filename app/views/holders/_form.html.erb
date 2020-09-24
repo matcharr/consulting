@@ -1,0 +1,12 @@
+<% if current_user && current_user.administrator %>
+  <%= form_with model: holder do |f| %>
+    <%= f.label :title, "Titre" %>
+    <%= f.text_field :title, class: 'form-control'%>
+    <%= f.label :pdf, "Fichier" %>
+    <%= f.fields_for :pdf  do |p| %>
+      <%= p.file_field :pdf , :multiple => true, name: :pdf %>
+    <% end %>    
+    <%= f.hidden_field :section, :value => section %>
+    <%= f.submit "Envoyer", class: "btn btn-primary"%>
+  <%end%>
+<%end%>        

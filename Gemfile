@@ -72,3 +72,8 @@ gem 'faker'
 gem 'bcrypt'
 
 gem 'invisible_captcha'
+
+gem 'quilljs-rails'
+
+#for scheduled tasks
+gem 'whenever', require: false

@@ -26,32 +26,11 @@
       <div class='card'>
         <div class='card-header'>
           <h4>Formations :</h4>
+          <%= render 'holders/form', holder: @holder, section: '["protection de l\'enfance","formation"]'%>
         </div>
         <div class='card-body'>
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/EPE_Initiation.pdf", :target => "_blank"%>
-            <p class='ml-2 align-self-center'> Evaluer en protection de l'enfance - niveau 1 - initiation</p>
-          </div>
-          <hr>
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/EPE_Approfondissement.pdf", :target => "_blank"%>
-            <p class='ml-2 align-self-center'> Evaluer en protection de l'enfance - niveau 2 - approfondissement</p>
-          </div>
-          <hr>
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/AE3_ECRITS_20PROFESSIONNELS_20EN_20PROTECTION_20DE_20L_27ENFANCE.pdf", :target => "_blank"%>
-            <p class='ml-2 align-self-center'>Les écrits professionnels en protection de l'enfance</p>
-          </div>       
-          <hr>
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/Retour_d'expérience_avec_méthode_Alföldi.pdf", :target => "_blank"%>
-            <p class='ml-2 align-self-center'>Retour d'expérience sur situations d'enfants en risque crucial avec la méthode Alföldi</p>
-          </div>         
-          <hr>
-          <div class='d-flex'>
-            <%= link_to ( image_tag "adobe-pdf-logo.jpg", style: "height: 3em"), "/formation/Plan_d'amélioration_continue_de_la_qualité_-_le_classeur_PACQ.pdf", :target => "_blank"%>
-            <p class='ml-2 align-self-center'>Plan d'amélioration continue de la qualité - Le classeur Pacq</p>
-          </div> 
+          <%=render 'holders/index', holders: @holders%>
+        </div>
         </div>            
       </div>
     </div>
