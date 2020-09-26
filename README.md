@@ -3,6 +3,15 @@ Using Rails 5.2.4.3
 
 heroku: https://alfoldievaluation-beta.herokuapp.com
 
+<ul>DEVELOP O.13 || 26/09/2020
+    <li>All pdf file can now be edited and added by administrator</li>
+    <li>video implemented in "methode alfoldi" static page</li>
+    <li>Newsletter interface implemented</li>
+    <li>Newsletter coding in progress</li>
+    <li>User now have a newsletter attribut at inscription en profile edition</li>
+    <li>Quill text editor implemented for file</li>
+</ul>
+
 <ul>BETA O.O2 || 30/08/2020
     <li>deivise view presentable</li>
     <li>statics done with last update from client</li>

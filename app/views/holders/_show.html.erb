@@ -7,10 +7,10 @@
     <% if current_user && current_user.administrator %>
       <div class="mr-auto">
           <%= link_to edit_holder_path(holder.id), remote: true do%>
-            <i class="fas fa-pen-fancy" class='ml-3'></i>
+            <i class="ml-2 fa-bg fas fa-pen-fancy" class='ml-3'></i>
           <%end%>
           <%= link_to holder, method: "delete", remote: true do%>
-            <i class="fas fa-trash-alt"></i>
+            <i class="ml-2 fa-bg fas fa-trash-alt"></i>
           <%end%>
       </div>
     <% end %>
