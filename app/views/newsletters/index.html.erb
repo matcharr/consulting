@@ -24,8 +24,8 @@
           <%= newsletter.object %></h3>
         </button>
         <div class='justi'>
-          <%= link_to edit_newsletter_path(newsletter) do%><i class="fa-3x fas fa-pen-fancy" class='ml-3'></i><%end%>
-          <%= link_to newsletter, method: :delete, data: { confirm: 'Effacer le modèle?' } do%><i class="fa-3x fas fa-trash-alt"></i><%end%>              
+          <%= link_to edit_newsletter_path(newsletter) do%><i class="fa-3x ml-3 text-warning fas fa-pen-fancy" class='ml-3'></i><%end%>
+          <%= link_to newsletter, method: :delete, data: { confirm: 'Effacer le modèle?' } do%><i class="fa-3x ml-3 text-warning fas fa-trash-alt"></i><%end%>              
         </div>
       </div>
 

@@ -1,2 +1,7 @@
 console.log('<%=@holder.section_string%>')
-document.getElementById('<%=@holder.section_string%>').insertAdjacentHTML("afterbegin","<%= j render "holders/show", holder: @holder %><hr>")
+<% if @holder.section_array[0] != "footer"%>
+document.getElementById('<%=@holder.section_string%>').insertAdjacentHTML("afterbegin","<%= j render "holders/show", holder: @holder, url: @urls["#{@holder.id}"]%><hr>")
+<% else %>
+console.log('<%=@holder.title%>')
+document.getElementById('<%=@holder.section_string%>').innerHTML = "<%= j render "holders/show", holder: @holder, url: @urls["#{@holder.id}"]%>"
+<% end %>

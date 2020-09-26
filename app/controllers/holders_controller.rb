@@ -1,21 +1,26 @@
 class HoldersController < ApplicationController
-  before_action :authenticate_administrator
+  before_action :authenticate_administrator, :holder_urls
 
   def new
     @holder = Holder.new
     @holders = Holder.all
-    @urls = holder_urls(Holder.all)
   end
 
   def create
-    @urls = holder_urls(Holder.all)
-    section = params[:holder].select{|k,v|v==["on"]}.keys
-    section = params[:holder][:section] if params[:holder][:section]
-    @holder = Holder.create(title: params[:holder][:title], section: section)
-    @holder.pdf.attach(params[:pdf])
-    respond_to do |format|
-      format.html { redirect_to folder_path }
-      format.js { }
+    if params[:pdf]
+      section = params[:holder].select{|k,v|v==["on"]}.keys
+      section = params[:holder][:section] if params[:holder][:section]
+      @holder = Holder.create(title: params[:holder][:title], section: section)
+      @holder.pdf.attach(params[:pdf])
+      respond_to do |format|
+        format.html { redirect_to folder_path }
+        format.js { }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to folder_path }
+        format.js { }
+      end
     end
   end
 
@@ -35,7 +40,6 @@ class HoldersController < ApplicationController
       @holder.pdf.purge 
       @holder.pdf.attach(params[:pdf])
     end
-    @urls = holder_urls(Holder.all)
     respond_to do |format|
       format.html { redirect_to folder_path }
       format.js { }

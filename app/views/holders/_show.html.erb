@@ -1,16 +1,18 @@
 <div class='d-flex' id="holder#<%=holder.id%>">
   <%= link_to @urls["#{holder.id}"], :target => "_blank", class: "d-flex" do%>
-    <%= image_tag "adobe-pdf-logo.jpg", style: "height: 3em" %>
+    <% unless holder.section_array[0] == "footer" %>
+      <%= image_tag "adobe-pdf-logo.jpg", style: "height: 3em" %>
+    <%end%>
     <div class='align-self-center'>
     <p class='ml-2 mb-0 align-self-center'><%=holder.title%></p>
   <%end%>
     <% if current_user && current_user.administrator %>
       <div class="mr-auto">
           <%= link_to edit_holder_path(holder.id), remote: true do%>
-            <i class="ml-2 fa-bg fas fa-pen-fancy" class='ml-3'></i>
+            <i class="ml-2 fa-bg fas text-warning fa-pen-fancy" class='ml-3'></i>
           <%end%>
-          <%= link_to holder, method: "delete", remote: true do%>
-            <i class="ml-2 fa-bg fas fa-trash-alt"></i>
+          <%= link_to holder, method: "delete", remote: true, data: { confirm: 'Effacer le document?' }  do%>
+            <i class="ml-2 fa-bg fas text-warning fa-trash-alt"></i>
           <%end%>
       </div>
     <% end %>
