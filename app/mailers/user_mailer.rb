@@ -15,7 +15,7 @@ class UserMailer < ApplicationMailer
   end
 
   def newsletter_mailer
-    @users = User.all#where(newsletter: true)
+    @users = User.where(newsletter: true)
     emails = @users.collect(&:email).join(", ")
     mail(to: emails, subject: "Hi, this is a test mail.")
   end

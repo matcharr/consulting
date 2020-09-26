@@ -32,12 +32,10 @@ class NewslettersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_newsletter
       @newsletter = Newsletter.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def newsletter_params
       params.require(:newsletter).permit(:object, :body)
     end
