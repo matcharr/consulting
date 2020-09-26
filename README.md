@@ -1,9 +1,9 @@
 <h1>Website in beta for consulting.</h1>
 Using Rails 5.2.4.3
 
-heroku: https://alfoldievaluation-beta.herokuapp.com
+heroku-PRODUCTION: https://dashboard.heroku.com/apps/alfoldielvaluation-development
 
-<ul>DEVELOP O.13 || 26/09/2020
+<ul>DEVELOP 0.13 || 26/09/2020
     <li>All pdf file can now be edited and added by administrator</li>
     <li>video implemented in "methode alfoldi" static page</li>
     <li>Newsletter interface implemented</li>
@@ -12,7 +12,7 @@ heroku: https://alfoldievaluation-beta.herokuapp.com
     <li>Quill text editor implemented for file</li>
 </ul>
 
-<ul>BETA O.O2 || 30/08/2020
+<ul>BETA 0.02 || 30/08/2020
     <li>deivise view presentable</li>
     <li>statics done with last update from client</li>
     <li>news letter service linked</li>
@@ -21,7 +21,7 @@ heroku: https://alfoldievaluation-beta.herokuapp.com
     <li>pluged contact mailer</li>
 </ul>
 
-<ul>BETA O.O2 || 27/08/2020
+<ul>BETA 0.02 || 27/08/2020
     <li>comment implemented</li>
     <li>asset pipeline implemented</li>
     <li>java implementation</li>
