@@ -10,6 +10,8 @@ heroku-PRODUCTION: https://dashboard.heroku.com/apps/alfoldielvaluation-developm
     <li>Newsletter coding in progress</li>
     <li>User now have a newsletter attribut at inscription en profile edition</li>
     <li>Quill text editor implemented for file</li>
+    <li>3 footer link can be edited by admin<li>
+    <li>updated admin button color<li>
 </ul>
 
 <ul>BETA 0.02 || 30/08/2020
