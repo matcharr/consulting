@@ -1,4 +1,5 @@
 class StaticsController < ApplicationController
+  before_action :holder_urls, only: [:protection_enfance, :conferences_familiales, :articles]
 
   def mentions_legales
   end
@@ -8,15 +9,13 @@ class StaticsController < ApplicationController
 
   def protection_enfance
     @holder = Holder.new
-    @urls = holder_urls(Holder.all)
-    @holders = holder_where(["protection de l\'enfance","formation"])
+    @holders = holder_where(["protection enfance","formation"])
   end
 
   def conferences_familiales
     @holder = Holder.new
     @holders_formation = holder_where(["conferences familiales","formation"])
     @holders_article = holder_where(["conferences familiales","article"])
-    @urls = holder_urls(Holder.all)
   end
 
   def temoignages
@@ -30,7 +29,6 @@ class StaticsController < ApplicationController
 
   def articles
     @holder = Holder.new
-    @urls = holder_urls(Holder.all)
     @holders = holder_where(["article"])
   end
 

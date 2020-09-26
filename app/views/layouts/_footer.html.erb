@@ -20,17 +20,7 @@
          <%= link_to "Mentions légales", statics_mentions_legales_path %>
         </h6>
       </div>
-      <!-- Grid column -->
 
-      <!-- Grid column -->
-      <div class="col mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <%=link_to "Témoignages", "/statics/temoignages"%>
-        </h6>
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
      <!-- <div class="col mb-3">
         <h6 class="text-uppercase font-weight-bold">
           <%=link_to "Contact", new_admin_mail_path %>
@@ -39,24 +29,42 @@
 
       <!-- Grid column -->
       <div class="col mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-         <%= link_to "Conditions générales de vente", "/condition_vent/1_Conditions_20g_C3_A9n_C3_A9rales_20de_20vente.pdf", :target => "_blank"%>
+        <h6 class="text-uppercase font-weight-bold" id="footer, 1">
+          <% if @footer_holders["footer_1"]%>
+            <%=render "holders/show", holder: @footer_holders["footer_1"]%>
+          <% elsif current_user && current_user.administrator %>
+            <%= render "holders/form", holder: @footer_holder_new, section: "['footer', '1']"%>
+          <%else%>
+            <h6 class="text-secondary">_</h6>
+          <%end%>
         </h6>
       </div>
       <!-- Grid column -->
 
       <!-- Grid column -->
       <div class="col mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <%=link_to "Règlement intérieur", "/condition_vent/3_R_C3_A8glement_20int_C3_A9rieur.pdf", :target => "_blank"%>
+        <h6 class="text-uppercase font-weight-bold" id="footer, 2">
+          <% if @footer_holders["footer_2"]%>
+            <%=render "holders/show", holder: @footer_holders["footer_2"]%>
+          <% elsif current_user && current_user.administrator %>
+            <%= render "holders/form", holder: @footer_holder_new, section: "['footer', '2']"%>
+          <%else%>
+            <h6 class="text-secondary">_</h6>
+          <%end%>
         </h6>
       </div>
       <!-- Grid column -->
 
       <!-- Grid column -->
       <div class="col mb-3">
-        <h6 class="text-uppercase font-weight-bold">
-          <%=link_to "Livret d'accueil", "/condition_vent/1_D_C3_A9pliant_20Alf_C3_B6ldi_20Evaluation.pdf", :target => "_blank"%>
+        <h6 class="text-uppercase font-weight-bold" id="footer, 3">
+          <% if @footer_holders["footer_3"]%>
+            <%=render "holders/show", holder: @footer_holders["footer_3"]%>
+          <% elsif current_user && current_user.administrator %>
+            <%= render "holders/form", holder: @footer_holder_new, section: "['footer', '3']"%>
+          <%else%>
+            <h6 class="text-secondary">_</h6>
+          <%end%>
         </h6>
       </div>
       <!-- Grid column -->
