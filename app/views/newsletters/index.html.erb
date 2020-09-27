@@ -14,28 +14,29 @@
   <%= link_to "s'abonner", new_user_registration_path, class: 'w-100 btn btn-outline-info' if !current_user %>
   <%= link_to "s'abonner", edit_user_registration_path, class: 'w-100 btn btn-outline-info' if current_user && !current_user.newsletter %>  
   <%= link_to "Nouveau modèle", new_newsletter_path, class: 'w-100 btn btn-outline-primary' if current_user && current_user.administrator %>
+  <% if current_user && current_user.administrator %>
+    <% @newsletters.each do |newsletter| %>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header d-flex flex-row justify-content-between" id="heading<%=newsletter.id%>">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<%=newsletter.id%>" aria-expanded="true" aria-controls="collapse<%=newsletter.id%>">
+              <h3><b>Objet:<b>
+              <%= newsletter.object %></h3>
+            </button>
+            <div class='justi'>
+              <%= link_to edit_newsletter_path(newsletter) do%><i class="fa-3x ml-3 text-warning fas fa-pen-fancy" class='ml-3'></i><%end%>
+              <%= link_to newsletter, method: :delete, data: { confirm: 'Effacer le modèle?' } do%><i class="fa-3x ml-3 text-warning fas fa-trash-alt"></i><%end%>              
+            </div>
+          </div>
 
-<% @newsletters.each do |newsletter| %>
-  <div id="accordion">
-    <div class="card">
-      <div class="card-header d-flex flex-row justify-content-between" id="heading<%=newsletter.id%>">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<%=newsletter.id%>" aria-expanded="true" aria-controls="collapse<%=newsletter.id%>">
-          <h3><b>Objet:<b>
-          <%= newsletter.object %></h3>
-        </button>
-        <div class='justi'>
-          <%= link_to edit_newsletter_path(newsletter) do%><i class="fa-3x ml-3 text-warning fas fa-pen-fancy" class='ml-3'></i><%end%>
-          <%= link_to newsletter, method: :delete, data: { confirm: 'Effacer le modèle?' } do%><i class="fa-3x ml-3 text-warning fas fa-trash-alt"></i><%end%>              
+          <div id="collapse<%=newsletter.id%>" class="collapse" aria-labelledby="heading<%=newsletter.id%>" data-parent="#accordion">
+            <div class="card-body">
+                <%= newsletter.body.html_safe %>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div id="collapse<%=newsletter.id%>" class="collapse" aria-labelledby="heading<%=newsletter.id%>" data-parent="#accordion">
-        <div class="card-body">
-            <%= newsletter.body.html_safe %>
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>
+    <% end %>
+  <%end%>
 </div>
 

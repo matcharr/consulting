@@ -8,7 +8,7 @@ heroku-PRODUCTION: https://dashboard.heroku.com/apps/alfoldielvaluation-developm
     <li>video implemented in "methode alfoldi" static page</li>
     <li>Newsletter interface implemented</li>
     <li>Newsletter coding in progress</li>
-    <li>User now have a newsletter attribut at inscription en profile edition</li>
+    <li>User now have a newsletter attribut at inscription end profile edition</li>
     <li>Quill text editor implemented for file</li>
     <li>3 footer link can be edited by admin</li>
     <li>updated admin button color</li>
