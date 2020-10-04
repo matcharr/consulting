@@ -7,28 +7,28 @@
 <footer style='background-color: #f0f0f0'class="footer-margin-top background-light-blue page-footer font-small indigo">
 
   <!-- Footer Links -->
-  <div class="container background-color">
+  <div class="background-color">
 
   <br>
   <br>
     <!-- Grid row-->
-    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+    <div class="row text-center d-flex flex-wrap justify-content-around pt-5 mb-3 pl-5 pr-5">
 
       <!-- Grid column -->
-      <div class="col mb-3">
+      <div class="col mb-3 justify-content-around d-flex">
         <h6 class="text-uppercase font-weight-bold">
          <%= link_to "Mentions légales", statics_mentions_legales_path %>
         </h6>
       </div>
 
-     <!-- <div class="col mb-3">
+     <!-- <div class="col mb-3 justify-content-around d-flex">
         <h6 class="text-uppercase font-weight-bold">
           <%=link_to "Contact", new_admin_mail_path %>
         </h6>
       </div>-->
 
       <!-- Grid column -->
-      <div class="col mb-3">
+      <div class="col mb-3 justify-content-around d-flex">
         <h6 class="text-uppercase font-weight-bold" id="footer, 1">
           <% if @footer_holders["footer_1"]%>
             <%=render "holders/show", holder: @footer_holders["footer_1"]%>
@@ -42,7 +42,7 @@
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col mb-3">
+      <div class="col mb-3 justify-content-around d-flex">
         <h6 class="text-uppercase font-weight-bold" id="footer, 2">
           <% if @footer_holders["footer_2"]%>
             <%=render "holders/show", holder: @footer_holders["footer_2"]%>
@@ -56,7 +56,7 @@
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col mb-3">
+      <div class="col mb-3 justify-content-around d-flex">
         <h6 class="text-uppercase font-weight-bold" id="footer, 3">
           <% if @footer_holders["footer_3"]%>
             <%=render "holders/show", holder: @footer_holders["footer_3"]%>
