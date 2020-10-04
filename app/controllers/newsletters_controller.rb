@@ -37,6 +37,7 @@ class NewslettersController < ApplicationController
     end
 
     def newsletter_params
+      params[:newsletter][:body] = unparseHTML(params[:folder][:body])
       params.require(:newsletter).permit(:object, :body)
     end
 end

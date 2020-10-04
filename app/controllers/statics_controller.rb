@@ -33,6 +33,10 @@ class StaticsController < ApplicationController
   end
 
   def dico_de_francis
+    @holder_new = Holder.new
+    @holder = holder_where(["dico de francis"])[0]
+    puts "ù"*100
+    puts @holder
   end
 
   def newsletter

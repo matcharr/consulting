@@ -1,5 +1,5 @@
 console.log('<%=@holder.section_string%>')
-<% if @holder.section_array[0] != "footer"%>
+<% unless @holder.section_array[0] == "footer" || @holder.section_array[0] == "dico de francis"%>
 document.getElementById('<%=@holder.section_string%>').insertAdjacentHTML("afterbegin","<%= j render "holders/show", holder: @holder, url: @urls["#{@holder.id}"]%><hr>")
 <% else %>
 console.log('<%=@holder.title%>')

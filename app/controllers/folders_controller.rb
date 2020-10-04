@@ -50,6 +50,7 @@ class FoldersController < ApplicationController
   private
 
   def post_params
+    params[:folder][:content] = unparseHTML(params[:folder][:content])
     post_params = params.require(:folder).permit(:title, :content)
   end
 

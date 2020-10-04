@@ -1,9 +1,10 @@
 <div class='container mt-4'>
   <div class='row'>
-    <div class='col'>
-      <div class='row justify-content-between'>
+    <div class='col pt-3'>
+      <div class='row'>
+        <%= image_tag "Ecrit_professionnel.jpg", class: 'ml-3 mr-3 img-fluid rounded border', style: 'height: 6em'%>
         <h1 class='align-self-center'>Le dico de Francis</h1>
-        <%= image_tag "Ecrit_professionnel.jpg", class: 'img-fluid rounded border', style: 'height: 6em'%>
+        <br>
       </div>
       <p>Je me suis décidé à mettre en ligne mon dico, pour tous ceux que cela pourrait intéresser. C'est un gros chantier : plus de trente ans de travail. Un prototype conçu pour n'être jamais achevé. Certains termes sont élaborés, d'autres en cours d’explorations, d’autres encore à peine définis.<br><br>A quoi ça sert ? A vous si vous vous intéressez aux bases éthiques et aux concepts de la méthode Alföldi, à vous curieux, chercheurs, étudiants, en quête de références sur la méthodologie clinique et sur l’évaluation qui produit du sens. Puissiez-vous y trouver de quoi nourir vos réflexions !</p>
     </div>
@@ -12,18 +13,24 @@
         <div class='card-body'>
           <div class='d-flex flex-column'>
             <div class='card bg-light shadow m-2'>
-              <b class='card-body text-center'>le vocabulaire de l'évaluation porteuse de sens</b>
+              <b class='card-body text-center'>Le vocabulaire de l'évaluation porteuse de sens</b>
             </div>
             <div class='card bg-light shadow m-2'>
-              <b class='card-body text-center'>accédez à + de 500 mots en quelques clics </b>
+              <b class='card-body text-center'>Accédez à + de 500 mots en quelques clics </b>
             </div>
             <div class='card bg-light shadow m-2'>
-              <b class='card-body text-center'>une ressource atcualisée  à la disposition de tous</b>
+              <b class='card-body text-center'>Une ressource atcualisée  à la disposition de tous</b>
             </div>
           </div>
         </div>
-        <div class='card-footer d-flex justify-content-center'>
-          <%= link_to "", download_path, class: 'fas fa-file-download fa-8x' %>
+        <div class='card-footer d-flex justify-content-center' id="dico de francis">
+          <% if @holder %>
+            <h3><%= render "holders/show", holder: @holder %></h3>
+          <% elsif current_user && current_user.administrator %>
+            <%= render "holders/form", holder: @holder_new, section: "['dico de francis']"%>
+          <%else%>
+            <h6 class="text-secondary">_</h6>
+          <%end%>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <div class='d-flex' id="holder#<%=holder.id%>">
   <%= link_to @urls["#{holder.id}"], :target => "_blank", class: "d-flex" do%>
-    <% unless holder.section_array[0] == "footer" %>
-      <%= image_tag "adobe-pdf-logo.jpg", style: "height: 3em" %>
+    <% unless holder.section_array[0] == "footer"%>
+      <i class='fas fa-file-download fa-lg align-self-center'></i>
     <%end%>
     <div class='align-self-center'>
     <p class='ml-2 mb-0 align-self-center'><%=holder.title%></p>

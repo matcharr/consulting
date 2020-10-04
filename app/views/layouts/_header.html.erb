@@ -39,13 +39,12 @@
           <%=link_to "Dico de Francis", "/statics/dico_de_francis", class: "dropdown-item" %>
         </div>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%=link_to "Support", new_admin_mail_path, class: "dropdown-item" %>
-          <%=link_to "Newsletter", newsletters_path, class: "dropdown-item" %>
-        </div>
+      <li class="nav-item">
+          <%=link_to "Contact", new_admin_mail_path, class: "nav-link" %>
       </li>
+      <li class="nav-item">
+          <%=link_to "Newsletter", newsletters_path, class: "nav-link" %>
+      </li>      
       </ul>
       <ul class='ml-auto navbar-nav'>
         <li class="nav-item dropdown">
