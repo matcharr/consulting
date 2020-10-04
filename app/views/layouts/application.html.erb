@@ -15,7 +15,9 @@
 
   <body class='py-0'>
     <%= render 'layouts/header'%>
-    <%= render 'layouts/flash'%>
+    <div id="alert">
+      <%= render 'layouts/flash'%>
+    </div>
     <%= yield %>
     <%= render 'layouts/footer'%>
   </body>
