@@ -10,7 +10,7 @@ User.destroy_all
 Folder.destroy_all
 
 User.create(first_name: 'Bobo', email: 'balfoldi@yahoo.fr', password: '123123', administrator: true)
-#User.create(first_name: 'HarleyBoy', email: 'falfoldi@gmail.com', password: '123123', administrator: true)
+User.create(first_name: 'HarleyBoy', email: 'falfoldi@gmail.com', password: '123123', administrator: true)
 
 #10.times do
 #    first_name = Faker::Name.first_name

@@ -3,17 +3,6 @@ Using Rails 5.2.4.3
 
 heroku-PRODUCTION: https://dashboard.heroku.com/apps/alfoldielvaluation-development
 
-<ul>DEVELOP 0.13 || 26/09/2020
-    <li>All pdf file can now be edited and added by administrator</li>
-    <li>video implemented in "methode alfoldi" static page</li>
-    <li>Newsletter interface implemented</li>
-    <li>Newsletter coding in progress</li>
-    <li>User now have a newsletter attribut at inscription end profile edition</li>
-    <li>Quill text editor implemented for file</li>
-    <li>3 footer link can be edited by admin</li>
-    <li>updated admin button color</li>
-</ul>
-
 <ul>BETA 0.02 || 30/08/2020
     <li>deivise view presentable</li>
     <li>statics done with last update from client</li>
