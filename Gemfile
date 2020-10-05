@@ -77,3 +77,6 @@ gem 'quilljs-rails'
 
 #for scheduled tasks
 gem 'whenever', require: false
+
+# amazone cloude gem
+gem "aws-sdk-s3", require: false
