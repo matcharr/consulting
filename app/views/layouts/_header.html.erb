@@ -46,10 +46,11 @@
           <%=link_to "Newsletter", newsletters_path, class: "nav-link" %>
       </li>      
       </ul>
+      </div>
       <ul class='ml-auto navbar-nav'>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle d-flex flex-row" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <p class='align-middle mr-1'>Mon compte </p>
+            <p class='align-self-center mr-1 mb-0'>Mon compte </p>
             <i class='fas fa-user-circle fa-2x align-middle '></i>
           </a>
           <% if user_signed_in? %>

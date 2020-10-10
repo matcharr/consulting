@@ -20,10 +20,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 350px;
+  height: 450px;
  }
 
 p{
   text-align: justify;
   text-justify: inter-word; 
+}
+
+#footer {
+  margin-top: auto;
 }

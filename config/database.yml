@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: method_alfoldi_production
-  username: alfoldi
-  password: <%= ENV['METHOD_ALFOLDI_DATABASE_PASSWORD'] %>
+
