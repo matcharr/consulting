@@ -9,25 +9,29 @@
       <%= render "devise/shared/error_messages", resource: resource %>
       
       <div class='d-flex '>
-        <div class="field">
-          <%= f.text_field :first_name, placeholder: "Prénom" , class: "form-text mr-3" %>
+        <div class="field mr-3">
+          <%= f.text_field :first_name, placeholder: "Prénom" , class: "form-control " %>
         </div>
         <div class="field">
-          <%= f.text_field :last_name, placeholder: "Nom", class: "form-text mb-3" %>
+          <%= f.text_field :last_name, placeholder: "Nom", class: "form-control mb-3" %>
         </div>    
       </div>
 
       <div class="field d-flex justify-content-center">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-text" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", style: "width: 15em", placeholder: "Email", class: "form-control" %>
       </div>
 
       <div class="field mt-3 text-center">
-        <label>Definir un mot de passe</label><br />
-        <div class='d-flex'>
-          <%= f.password_field :password, class: "mr-3", autocomplete: "new-password", placeholder: "Mot de passe" %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirmation" %>
-        </div>  
+        <label class='m-0'>Definir un mot de passe</label><br />
         <em class='form-text text-muted'>6 caractère minimum</em>
+        <div class='d-flex  '>
+          <div class="field mr-3">
+            <%= f.password_field :password, class: "form-control", autocomplete: "new-password", placeholder: "Mot de passe" %><br />
+          </div>        
+          <div class="field">
+            <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password", placeholder: "Confirmation" %>
+          </div>
+        </div>  
       </div>
 
       <div class='form-group pt-3'>
