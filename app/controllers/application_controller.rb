@@ -49,4 +49,8 @@ class ApplicationController < ActionController::Base
   def unparseHTML(string)
    string.gsub("&lt;", "<").gsub("&gt;", ">")
   end
+
+  def parseHTML(string)
+    string.gsub("<", "&lt;").gsub(">", "&gt;")
+   end
 end
