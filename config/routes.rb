@@ -37,8 +37,11 @@ Rails.application.routes.draw do
   
   root "landing_page#index"
   
+  
   resources :devise_test, only: [:create]
   
+  resources :users, only: [:update]
+
   resources :admin_mail, only: [:new, :create]
   
   resources :landing_page, only: [:index]  

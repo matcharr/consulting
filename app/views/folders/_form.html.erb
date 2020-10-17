@@ -4,31 +4,14 @@
     <div class="form_group card-header">
       <label> Titre du dossier</label></br>
       <%= f.text_field :title, class: 'form_control mb-3 w-25'%>
-      <%= f.hidden_field :content, id: "post-quill", required: true %>
-      <div id="editor-container" hidden="true"></div>
-      <div id="editor"></div>
-      <button type="submit", class='btn btn-primary'> Envoyer </button>
-      <script>
-        var form = document.querySelector('#<%=form%>');
-        var quill = new Quill('#editor', {
-          theme: 'snow',
-          modules: {
-          toolbar: [
-            [{ 'header': [1, 2, 3, false] }],
-            [{ 'color': [] }, { 'background': [] }],
-            ['bold', 'italic', 'underline', 'strike'],
-            ['blockquote', 'code-block'],
-            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-            [{ 'indent': '-1'}, { 'indent': '+1' }],
-            ['clean']
-          ]
-        }
-        });
-        form.onsubmit = function() {
-          document.querySelector('#post-quill').value = form.querySelector(".ql-editor").innerHTML;
-        };
-        form.querySelector(".ql-editor").innerHTML = document.querySelector('#post-quill').value
-      </script>  
+    </div>
+    
+    <div class='card-body'>
+      <%= f.text_area :content, class: "w-100", style: "height: 50em"%>
+    </div>
+
+    <div class='card-footer'>
+    <button type="submit", class='btn btn-primary'> Envoyer </button>
     </div>
   <%end%>
 </div>

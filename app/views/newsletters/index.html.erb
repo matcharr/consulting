@@ -11,7 +11,7 @@
     </div>
   </div>
   <%= link_to "s'abonner", new_user_registration_path, class: 'w-100 btn btn-outline-info' if !current_user %>
-  <%= link_to "s'abonner", edit_user_registration_path, class: 'w-100 btn btn-outline-info' if current_user && !current_user.newsletter %>  
+  <%= link_to "s'abonner", user_path(current_user.id), method: "patch", class: 'w-100 btn btn-outline-info' if current_user && !current_user.newsletter %>  
   <%= link_to "Nouveau modèle", new_newsletter_path, class: 'w-100 btn btn-outline-primary' if current_user && current_user.administrator %>
   <% if current_user && current_user.administrator %>
     <% @newsletters.each do |newsletter| %>
