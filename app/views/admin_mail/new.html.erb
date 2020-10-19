@@ -38,15 +38,15 @@
             <% else %>
               <div class="m-0">
                 <%= label_tag(:first_name, "Prénom:") %><br />
-                <%= text_field_tag(:first_name, class: "form-control mb-3") %>
+                <%= text_field_tag(:first_name,"", class: "form-control mb-3") %>
               </div>
               <div>
                 <%= label_tag(:last_name, "Nom:") %><br />
-                <%= text_field_tag(:last_name, class: "form-control mb-3") %>
+                <%= text_field_tag(:last_name,"", class: "form-control mb-3") %>
               </div>
               <div>
                 <%= label_tag(:email, "Courriel:") %><br />
-                <%= text_field_tag(:email, class: "form-control mb-3") %><br />
+                <%= text_field_tag(:email,"", class: "form-control mb-3") %><br />
               </div>              
             <% end %>
             <%= label_tag(:body, "Message:", class: "mt-2") %><br />
